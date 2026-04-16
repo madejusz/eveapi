@@ -28,11 +28,11 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('character_assets', function (Blueprint $table) {
-            $table->boolean('is_blueprint_copy')->nullable()->after('is_singleton');
+            $table->boolean('is_blueprint_copy')->default(false)->after('is_singleton');
         });
 
         Schema::table('corporation_assets', function (Blueprint $table) {
-            $table->boolean('is_blueprint_copy')->nullable()->after('is_singleton');
+            $table->boolean('is_blueprint_copy')->default(false)->after('is_singleton');
         });
     }
 
