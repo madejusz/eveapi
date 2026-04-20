@@ -42,5 +42,6 @@ class AssetMapping extends DataMapping
         'location_type' => 'location_type',
         'location_flag' => 'location_flag',
         'is_singleton' => 'is_singleton',
+        'is_blueprint_copy' => 'is_blueprint_copy',
     ];
 }

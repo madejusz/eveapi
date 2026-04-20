@@ -109,14 +109,16 @@ class Assets extends AbstractAuthCharacterJob
                     $structure_batch->addStructure($asset->location_id);
                 }
 
-                AssetMapping::make($model, $asset, [
+                $model = AssetMapping::make($model, $asset, [
                     'character_id' => function () {
                         return $this->getCharacterId();
                     },
                     'updated_at' => function () use ($start) {
                             return $start;
                         },
-                ])->save();
+                ]);
+
+                $model->save();
             });
 
             if (! $this->nextPage($response->getPagesCount()))
