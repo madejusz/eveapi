@@ -126,7 +126,6 @@ class Assets extends AbstractAuthCorporationJob
                         },
                     ]);
 
-                    $model->is_blueprint_copy = $model->is_blueprint_copy ?? false;
                     $model->save();
                 });
             });

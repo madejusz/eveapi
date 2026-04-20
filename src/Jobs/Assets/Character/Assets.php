@@ -118,7 +118,6 @@ class Assets extends AbstractAuthCharacterJob
                         },
                 ]);
 
-                $model->is_blueprint_copy = $model->is_blueprint_copy ?? false;
                 $model->save();
             });
 
