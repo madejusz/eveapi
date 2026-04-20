@@ -42,7 +42,6 @@ use Seat\Services\Models\ExtensibleModel;
         new OA\Property(property: 'location_type', description: 'The location qualifier', type: 'string', enum: ['station', 'solar_system', 'other']),
         new OA\Property(property: 'location_flag', description: 'The location flag'),
         new OA\Property(property: 'is_singleton', description: 'True if the item is not stacked', type: 'boolean'),
-        new OA\Property(property: 'is_blueprint_copy', description: 'True if the item is a blueprint copy (BPC), false if original (BPO), null if not a blueprint', type: 'boolean', nullable: true),
         new OA\Property(property: 'x', description: 'The x coordinate if the item is in space', type: 'number', format: 'double'),
         new OA\Property(property: 'y', description: 'The y coordinate if the item is in space', type: 'number', format: 'double'),
         new OA\Property(property: 'z', description: 'The z coordinate if the item is in space', type: 'number', format: 'double'),
@@ -65,7 +64,6 @@ class CorporationAsset extends ExtensibleModel implements HasTypeID
      */
     protected $casts = [
         'is_singleton' => 'boolean',
-        'is_blueprint_copy' => 'boolean',
     ];
 
     /**
